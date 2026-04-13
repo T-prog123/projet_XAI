@@ -87,3 +87,29 @@ train_cfg_transcoder = TrainConfig(
 
 trainer_transcoder = Trainer(train_cfg_transcoder, tokenized, gpt)
 trainer_transcoder.fit()
+
+# -----------------------------
+# 3) Train a small Skip Transcoder (SST)
+# -----------------------------
+sst_cfg = SaeConfig(
+    expansion_factor=8,
+    k=16,
+    transcode=True,
+    skip_connection=True,       # Enables the affine skip connection
+)
+
+train_cfg_sst = TrainConfig(
+    sae=sst_cfg,
+    batch_size=8,
+    grad_acc_steps=1,
+    micro_acc_steps=1,
+    layers=[0],                 # same layer for demo
+    save_every=50,
+    save_best=False,
+    log_to_wandb=False,
+    run_name="sst_small_demo",
+    save_dir="outputs",
+)
+
+trainer_sst = Trainer(train_cfg_sst, tokenized, gpt)
+trainer_sst.fit()
