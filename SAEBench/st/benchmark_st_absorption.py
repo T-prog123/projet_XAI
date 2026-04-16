@@ -9,11 +9,9 @@ from sparsify import Sae
 import sae_bench.custom_saes.custom_sae_config as custom_sae_config
 import sae_bench.evals.absorption.main as absorption
 from sae_bench.evals.absorption.eval_config import AbsorptionEvalConfig
-import sae_bench.sae_bench_utils.activation_collection as activation_collection
 import sae_bench.sae_bench_utils.general_utils as general_utils
 
 
-# config
 repo_id = "EleutherAI/Pythia-160m-ST-k64-65k"
 model_name = "pythia-160m-deduped"
 
@@ -30,7 +28,6 @@ force_rerun = True
 class SparsifyWrapper(nn.Module):
     def __init__(self, repo_id, hf_hookpoint, tl_hook_name, model_name, hook_layer, device, torch_dtype):
         super().__init__()
-
         self.sae = Sae.load_from_hub(repo_id, hookpoint=hf_hookpoint)
         self.sae = self.sae.to(device=device, dtype=torch_dtype)
         self.sae.eval()
@@ -42,11 +39,7 @@ class SparsifyWrapper(nn.Module):
         d_sae = self.sae.encoder.weight.shape[0]
 
         self.cfg = custom_sae_config.CustomSAEConfig(
-            model_name=model_name,
-            d_in=d_in,
-            d_sae=d_sae,
-            hook_name=tl_hook_name,
-            hook_layer=hook_layer,
+            model_name=model_name, d_in=d_in, d_sae=d_sae, hook_name=tl_hook_name, hook_layer=hook_layer
         )
         self.cfg.dtype = str(torch_dtype).split(".")[-1]
         self.cfg.architecture = "sparsify_topk"
@@ -61,22 +54,25 @@ class SparsifyWrapper(nn.Module):
     def encode(self, x):
         top_acts, top_indices, _ = self.sae.encode(x)
 
-        z = torch.zeros(
-            x.shape[0],
-            x.shape[1],
-            self.cfg.d_sae,
-            device=x.device,
-            dtype=x.dtype,
-        )
-        z.scatter_(2, top_indices, top_acts)
-        return z
+        if x.dim() == 2:
+            z = torch.zeros(x.shape[0], self.cfg.d_sae, device=x.device, dtype=x.dtype)
+            z.scatter_(1, top_indices, top_acts)
+            return z
+
+        if x.dim() == 3:
+            z = torch.zeros(x.shape[0], x.shape[1], self.cfg.d_sae, device=x.device, dtype=x.dtype)
+            z.scatter_(2, top_indices, top_acts)
+            return z
+
+        raise ValueError(f"Unsupported input rank for encode: {x.dim()}")
 
     def decode(self, z):
-        return z @ self.W_dec + self.b_dec
+        if z.dim() in (2, 3):
+            return z @ self.W_dec + self.b_dec
+        raise ValueError(f"Unsupported latent rank for decode: {z.dim()}")
 
     def forward(self, x):
-        z = self.encode(x)
-        return self.decode(z)
+        return self.decode(self.encode(x))
 
 
 def main():
@@ -85,38 +81,23 @@ def main():
     os.makedirs(output_folder, exist_ok=True)
 
     try:
-        sae = SparsifyWrapper(
-            repo_id=repo_id,
-            hf_hookpoint=hf_hookpoint,
-            tl_hook_name=tl_hook_name,
-            model_name=model_name,
-            hook_layer=hook_layer,
-            device=device,
-            torch_dtype=torch_dtype,
-        )
+        sae = SparsifyWrapper(repo_id, hf_hookpoint, tl_hook_name, model_name, hook_layer, device, torch_dtype)
     except Exception:
         print("[main] failed while building wrapper")
         traceback.print_exc()
         raise
 
     config = AbsorptionEvalConfig(model_name=model_name)
-    config.llm_batch_size = activation_collection.LLM_NAME_TO_BATCH_SIZE[model_name]
-    config.llm_dtype = activation_collection.LLM_NAME_TO_DTYPE[model_name]
+    config.llm_batch_size = 2
+    config.llm_dtype = "float32"
+    config.k_sparse_probe_batch_size = 512
+    config.eval_k_sparse_probe_batch_size = 8
+    config.k_sparse_probe_num_epochs = 10
+    config.max_k_value = 3
+    config.min_feats_for_eval = 5
+    config.precalc_k_sparse_probe_sae_acts = False
 
-    # fast smoke-test config
-    config.max_k_value = 1
-    config.k_sparse_probe_num_epochs = 1
-    config.min_feats_for_eval = 1
-
-    selected_saes = [("eleuther_pythia160m_st_k64_65k_layers6mlp_absorption_fast", sae)]
-
-    print("[main] wrapper ready")
-    print(f"[main] device={device}")
-    print(f"[main] hook={tl_hook_name}")
-    print(f"[main] output_folder={output_folder}")
-    print(f"[main] max_k_value={config.max_k_value}")
-    print(f"[main] k_sparse_probe_num_epochs={config.k_sparse_probe_num_epochs}")
-    print(f"[main] min_feats_for_eval={config.min_feats_for_eval}")
+    selected_saes = [("eleuther_pythia160m_st_k64_65k_layers6mlp_absorption", sae)]
 
     try:
         absorption.run_eval(
@@ -132,7 +113,7 @@ def main():
         raise
 
     print("[main] done")
-    print(f"[main] output folder contents: {os.listdir(output_folder)}")
+    print(os.listdir(output_folder))
 
 
 if __name__ == "__main__":

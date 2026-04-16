@@ -13,7 +13,6 @@ import sae_bench.sae_bench_utils.activation_collection as activation_collection
 import sae_bench.sae_bench_utils.general_utils as general_utils
 
 
-# config
 repo_id = "EleutherAI/Pythia-160m-SST-k64-32k"
 model_name = "pythia-160m-deduped"
 
@@ -34,7 +33,6 @@ clean_up_activations = True
 class SparsifySSTWrapper(nn.Module):
     def __init__(self, repo_id, hf_hookpoint, tl_hook_name, model_name, hook_layer, device, torch_dtype):
         super().__init__()
-
         self.sae = Sae.load_from_hub(repo_id, hookpoint=hf_hookpoint)
         self.sae = self.sae.to(device=device, dtype=torch_dtype)
         self.sae.eval()
@@ -46,11 +44,7 @@ class SparsifySSTWrapper(nn.Module):
         d_sae = self.sae.encoder.weight.shape[0]
 
         self.cfg = custom_sae_config.CustomSAEConfig(
-            model_name=model_name,
-            d_in=d_in,
-            d_sae=d_sae,
-            hook_name=tl_hook_name,
-            hook_layer=hook_layer,
+            model_name=model_name, d_in=d_in, d_sae=d_sae, hook_name=tl_hook_name, hook_layer=hook_layer
         )
         self.cfg.dtype = str(torch_dtype).split(".")[-1]
         self.cfg.architecture = "sparsify_sst"
@@ -61,36 +55,32 @@ class SparsifySSTWrapper(nn.Module):
         self.b_enc = nn.Parameter(self.sae.encoder.bias.detach().clone(), requires_grad=False)
         self.W_dec = nn.Parameter(self.sae.W_dec.detach().clone(), requires_grad=False)
         self.b_dec = nn.Parameter(self.sae.b_dec.detach().clone(), requires_grad=False)
-
-        self.W_skip = None
-        if hasattr(self.sae, "W_skip"):
-            self.W_skip = nn.Parameter(self.sae.W_skip.detach().clone(), requires_grad=False)
+        self.W_skip = nn.Parameter(self.sae.W_skip.detach().clone(), requires_grad=False) if hasattr(self.sae, "W_skip") else None
 
     def encode(self, x):
         top_acts, top_indices, _ = self.sae.encode(x)
 
-        z = torch.zeros(
-            x.shape[0],
-            x.shape[1],
-            self.cfg.d_sae,
-            device=x.device,
-            dtype=x.dtype,
-        )
-        z.scatter_(2, top_indices, top_acts)
-        return z
+        if x.dim() == 2:
+            z = torch.zeros(x.shape[0], self.cfg.d_sae, device=x.device, dtype=x.dtype)
+            z.scatter_(1, top_indices, top_acts)
+            return z
+
+        if x.dim() == 3:
+            z = torch.zeros(x.shape[0], x.shape[1], self.cfg.d_sae, device=x.device, dtype=x.dtype)
+            z.scatter_(2, top_indices, top_acts)
+            return z
+
+        raise ValueError(f"Unsupported input rank for encode: {x.dim()}")
 
     def decode(self, z):
-        # latent branch only
-        return z @ self.W_dec + self.b_dec
+        if z.dim() in (2, 3):
+            return z @ self.W_dec + self.b_dec
+        raise ValueError(f"Unsupported latent rank for decode: {z.dim()}")
 
     def forward(self, x):
-        # full SST output
-        z = self.encode(x)
-        out = self.decode(z)
-
+        out = self.decode(self.encode(x))
         if self.W_skip is not None:
             out = out + (x @ self.W_skip)
-
         return out
 
 
@@ -100,15 +90,7 @@ def main():
     os.makedirs(output_folder, exist_ok=True)
 
     try:
-        sae = SparsifySSTWrapper(
-            repo_id=repo_id,
-            hf_hookpoint=hf_hookpoint,
-            tl_hook_name=tl_hook_name,
-            model_name=model_name,
-            hook_layer=hook_layer,
-            device=device,
-            torch_dtype=torch_dtype,
-        )
+        sae = SparsifySSTWrapper(repo_id, hf_hookpoint, tl_hook_name, model_name, hook_layer, device, torch_dtype)
     except Exception:
         print("[main] failed while building wrapper")
         traceback.print_exc()
@@ -118,22 +100,7 @@ def main():
     config.llm_batch_size = activation_collection.LLM_NAME_TO_BATCH_SIZE[model_name]
     config.llm_dtype = activation_collection.LLM_NAME_TO_DTYPE[model_name]
 
-    # fast smoke-test config
-    config.dataset_names = ["fancyzhx/ag_news"]
-    config.probe_train_set_size = 200
-    config.probe_test_set_size = 100
-    config.k_values = [1]
-
     selected_saes = [("eleuther_pythia160m_sst_k64_32k_layers6mlp_sparse", sae)]
-
-    print("[main] wrapper ready")
-    print(f"[main] device={device}")
-    print(f"[main] hook={tl_hook_name}")
-    print(f"[main] output_folder={output_folder}")
-    print(f"[main] dataset_names={config.dataset_names}")
-    print(f"[main] probe_train_set_size={config.probe_train_set_size}")
-    print(f"[main] probe_test_set_size={config.probe_test_set_size}")
-    print(f"[main] k_values={config.k_values}")
 
     try:
         sparse_probing.run_eval(
@@ -152,7 +119,7 @@ def main():
         raise
 
     print("[main] done")
-    print(f"[main] output folder contents: {os.listdir(output_folder)}")
+    print(os.listdir(output_folder))
 
 
 if __name__ == "__main__":
