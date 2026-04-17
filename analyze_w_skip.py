@@ -25,7 +25,8 @@ def main():
     gpt = AutoModelForCausalLM.from_pretrained(model_name, device_map={"": device})
     W_unembed = gpt.lm_head.weight.detach().float()
 
-    plt.figure(figsize=(10, 6))
+    # Dictionary to store singular values for our enhanced plotting
+    all_singular_values = {}
 
     # Open log file for writing
     with open(log_file_path, "w", encoding="utf-8") as log_file:
@@ -57,12 +58,12 @@ def main():
             # --- SVD ---
             U, S, Vh = torch.linalg.svd(W_skip)
             
-            # Plot
-            layer_num = folder.split('.')[1]
-            plt.plot(S.numpy(), marker='.', linestyle='-', markersize=2, label=f"Layer {layer_num}")
+            # Save singular values to our dictionary for Step 4
+            layer_num = int(folder.split('.')[1])
+            all_singular_values[layer_num] = S.numpy()
             
             # --- Logit Lens ---
-            top_k_vectors = 5  # Increased to get more data
+            top_k_vectors = 5  
             top_tokens = 10    
             
             log_file.write(f"=== LAYER {layer_num} ===\n")
@@ -85,17 +86,53 @@ def main():
                 log_file.write(f"    Write (+): {out_tokens}\n\n")
 
     # ==========================================
-    # 4. FINALIZE PLOT
+    # 4. ENHANCED PLOTTING (Multi-Panel)
     # ==========================================
-    plt.title("Singular Values of W_skip Across Layers")
-    plt.xlabel("Singular Value Index")
-    plt.ylabel("Magnitude (Log Scale)")
-    plt.yscale('log')
-    plt.grid(True, alpha=0.3)
-    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small')
+    if not all_singular_values:
+        print("No valid data was found to plot.")
+        return
+
+    # We use a 1x2 subplot: one for the full view, one for the 'Head' zoom
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+    
+    # Use a sequential colormap to show depth progression
+    cmap = plt.get_cmap('viridis', 16)
+
+    # We iterate over sorted keys to ensure the legend order is correct (0 to 15)
+    for i in sorted(all_singular_values.keys()):
+        layer_s = all_singular_values[i]
+        color = cmap(i)
+        
+        # Plot 1: Full Spectrum (Log Scale)
+        ax1.plot(layer_s, color=color, alpha=0.7, label=f"L{i}")
+        
+        # Plot 2: Head Zoom (First 150 indices)
+        # This is where the 'functional rank' is most visible
+        ax2.plot(layer_s[:150], color=color, alpha=0.8, label=f"L{i}")
+
+    # Format Full Plot
+    ax1.set_title("Full W_skip Singular Value Spectrum", fontsize=14)
+    ax1.set_yscale('log')
+    ax1.set_xlabel("Singular Value Index")
+    ax1.set_ylabel("Magnitude (Log Scale)")
+    ax1.grid(True, which="both", ls="-", alpha=0.2)
+
+    # Format Zoomed Plot
+    ax2.set_title("Zoomed View: The 'Functional' Head (0-150)", fontsize=14)
+    ax2.set_xlabel("Singular Value Index")
+    ax2.set_ylabel("Magnitude")
+    ax2.grid(True, alpha=0.3)
+
+    # Unified Legend (Placed outside the plots on the right)
+    handles, labels = ax1.get_legend_handles_labels()
+    fig.legend(handles, labels, bbox_to_anchor=(0.98, 0.95), loc='upper right', title="Layer")
+    
     plt.tight_layout()
-    plt.savefig("w_skip_svd_comparison.png", dpi=300)
-    print(f"\nDone! Results saved to '{log_file_path}' and 'w_skip_svd_comparison.png'")
+    # Adjust the right margin so the layout doesn't overlap the outside legend
+    plt.subplots_adjust(right=0.90)
+    
+    plt.savefig("w_skip_svd_enhanced.png", dpi=300)
+    print("\nEnhanced plot saved to 'w_skip_svd_enhanced.png'")
 
 if __name__ == "__main__":
     with torch.no_grad():

@@ -1,0 +1,419 @@
+SVD Analysis Log for meta-llama/Llama-3.2-1B
+==================================================
+
+=== LAYER 0 ===
+  [Vector #1] Singular Value: 7.00
+    Read (+) : ['inherited', 'idade', 'hões', 'hiba', 'Scheduled', 'éis', 'conserv', 'ові', 'consequence', 'departed']
+    Read (-) : ['ocr', 'egin', 'ught', 'icol', 'icolor', 'raf', 'elper', 'else', 'elp', 'icker']
+    Write (+): ['.', '', '.', '', '.', '::', ';', ':', '-C', '().']
+
+  [Vector #2] Singular Value: 3.93
+    Read (+) : ['ар', 'us', 'alo', 'ρ', 'reason', 'embro', 'sağlamak', '347', 'ado', 'nev']
+    Read (-) : ['Hanson', 'ضة', 'ển', '.webkit', 'ểm', 'xon', 'sire', 'ogenic', '=".', 'east']
+    Write (+): ['.', '.', '', ',', '.', 'du', ':', ':', '', ',']
+
+  [Vector #3] Singular Value: 2.10
+    Read (+) : [')(((', 'etc', '@yahoo', 'println', 'igh', 'py', 'lem', "',$", 'utches', '-%']
+    Read (-) : ['ěla', 'ení', 'för', 'asjon', 'iš', 'ání', 'ľ', 'ělí', 'ђ', 'ěl']
+    Write (+): ['uder', 'habit', 'tablets', 'quen', 'AAP', 'abin', 'Locker', 'inda', 'DIC', '777']
+
+  [Vector #4] Singular Value: 1.98
+    Read (+) : ['endregion', 'Incontri', ';element', '.createSequentialGroup', 'خارجية', '\xadi', 'ौट', '界', 'filetype', '彩票']
+    Read (-) : ['mold', 'baz', 'sheets', 'implied', 'foil', 'mult', 'rub', 'ent', 'cor', 'shape']
+    Write (+): ['erap', 'steer', 'aes', 'Moody', 'Ruby', 'mileage', 'a', 'Wiley', 'Pills', 'scape']
+
+  [Vector #5] Singular Value: 1.75
+    Read (+) : ['dana', 'uncomment', 'rtype', 'Plantae', '_hierarchy', 'πού', 'Mutable', '�i', 'πως', 'traction']
+    Read (-) : ['ambre', 'heim', 'ős', 'olla', 'orer', 'ients', 'ouri', 'ő', 'ív', 'heimer']
+    Write (+): ['avern', 'ức', 'ecast', 'customers', 'рост', 'ąż', 'rome', 'feat', 'Wayback', 'asking']
+
+=== LAYER 1 ===
+  [Vector #1] Singular Value: 7.28
+    Read (+) : ['SCRIBE', 'retim', 'ált', 'роч', 'ombok', 'conto', 'olutely', 'pán', 'VILLE', 'образ']
+    Read (-) : ['j', 'z', 'k', 'jay', 'rais', 'are', 'is', 'rip', 'jo', 'pull']
+    Write (+): ['package', '子', 'import', 'Tags', '(ns', '---', 'Question', 'kses', 'himself', '']
+
+  [Vector #2] Singular Value: 3.95
+    Read (+) : ['premi', 'ebay', 'Successful', 'vùng', '.ali', 'tedy', '-origin', 'leh', 'repression', 'kỳ']
+    Read (-) : ['aks', 'ле', 'ahr', 'ocom', 'ocr', 'ober', 'OR', 'umen', 'ym', 'bbe']
+    Write (+): ['oten', 'urre', 'erect', 'sten', 'aji', 'oured', 'ould', 'consort', 'Dominic', 'Weiner']
+
+  [Vector #3] Singular Value: 2.43
+    Read (+) : ['aldi', 'acker', 'omin', 'ustr', 'uner', 'eros', 'essen', 'agn', 'ряд', 'heim']
+    Read (-) : ['abwe', 'ountains', 'Includes', ':.:', 'getReference', 'locales', 'sq', '|:', 'others', 'lng']
+    Write (+): ['ilk', 'noch', 'aturing', 'urls', 'losing', 'itored', 'herited', 'dra', 'plated', 'mods']
+
+  [Vector #4] Singular Value: 1.47
+    Read (+) : ['сь', '망', 'ads', 'achers', 'ang', 'erts', 'conj', 'again', 'ems', 'again']
+    Read (-) : ['isphere', '.tencent', 'Flake', '"](', 'enim', 'REEN', 'Bethesda', 'Skyl', 'inch', '.hu']
+    Write (+): ['ường', 'encion', 'imson', 'isser', 'му', 'holm', 'imen', 'rlen', 'ukan', 'ffen']
+
+  [Vector #5] Singular Value: 1.17
+    Read (+) : ['olf', 'Tai', 'made', 'Tai', 'blo', 'copied', 'Making', 'Terr', 'iske', 'Tribute']
+    Read (-) : ['zept', 'phin', 'etyl', 'ypad', 'епти', 'овани', 'ignant', 'Giang', '�', 'NCY']
+    Write (+): ['klein', 'illos', 'Teknik', 'astically', 'lä', '�', 'indic', 'estr', 'ework', 'đâu']
+
+=== LAYER 2 ===
+  [Vector #1] Singular Value: 9.03
+    Read (+) : ['ountains', 'fixed', 'Tex', 'fix', '(force', 'Stay', 'overlook', '_USE', 'Sie', '_cur']
+    Read (-) : ['że', 'ół', 'ście', 'ľ', 'eled', 'ąż', 'zą', 'asto', 'ýš', 'łu']
+    Write (+): ['niż', 'diagnosed', 'PMC', 'Macedonia', 'diagnosis', 'ful', '治疗', 'familiar', 'osoph', 'あった']
+
+  [Vector #2] Singular Value: 5.54
+    Read (+) : ['.Bundle', 'YK', 'ød', 'år', 'mute', 'úi', 'ї', 'elps', 'URT', 'asjon']
+    Read (-) : ['Fen', '_IMPLEMENT', '.Windows', 'llib', 'strap', 'etyl', 'fulness', 'ose', 'phin', '元']
+    Write (+): ['<![', '.linkedin', 'あり', 'itself', '_override', 'aising', 'amen', 'elen', 'Amen', 'force']
+
+  [Vector #3] Singular Value: 0.57
+    Read (+) : ['ourselves', 'Percent', 'estr', 'unseren', '另', 'Datum', 'efd', '!_', '-trigger', 'triggers']
+    Read (-) : ['Gallery', 'discharged', 'bery', 'Scores', 'Bands', 'cash', 'Dar', 'sale', 'yne', 'herited']
+    Write (+): ['ľ', 'eled', '\xadi', 'ąż', 'ół', 'ęp', 'że', 'śnie', 'asto', 'яж']
+
+  [Vector #4] Singular Value: 0.38
+    Read (+) : ['ált', ':\\"', '.tencent', 'ån', '":"', 'oje', '\\"', '-Speed', ',\\"', '..."']
+    Read (-) : ['igg', 'tz', 'str', 'wal', 'ymb', '著', 'esper', 'are', 'etc', 'ту']
+    Write (+): ['Reds', 'artin', 'usic', 'icine', 'ouns', 'ByPrimaryKey', 'oogle', 'eriod', 'arrays', 'spell']
+
+  [Vector #5] Singular Value: 0.31
+    Read (+) : ['age', 'const', 'ance', 'soil', ']:', 'idents', 'Forrest', 'bacteria', '口', 'edelta']
+    Read (-) : ['лл', 'andin', 'ikler', '凡', '.sig', 'eten', 'efe', 'Responses', 'inou', 'iku']
+    Write (+): ['иск', '+",', 'але', 'уют', '座', 'traps', 'ská', '封', 'trap', 'лива']
+
+=== LAYER 3 ===
+  [Vector #1] Singular Value: 7.72
+    Read (+) : ['Fen', '_IMPLEMENT', 'tấn', 'visor', '.gl', '_MOD', 'fulness', 'ose', 'usb', 'llib']
+    Read (-) : ['.Bundle', 'ød', 'år', 'YK', '\xadi', 'úi', 'ї', 'URT', 'asjon', 'ningar']
+    Write (+): ['interpreted', 'means', 'subdivisions', 'Jama', 'means', 'heating', 'Durant', 'arenas', 'energy', 'penetration']
+
+  [Vector #2] Singular Value: 6.60
+    Read (+) : ['że', 'ół', 'ście', 'eled', 'ýš', 'ľ', 'ąż', 'ěž', 'rowad', 'eczy']
+    Read (-) : ['(force', 'ountains', 'fixed', 'Tex', '_USE', 'Jack', 'overlook', '/forum', 'fix', 'da']
+    Write (+): ['vetica', 'ctl', 'supporters', '!="', 'Bulldogs', 'Supporters', 'endorsements', 'Redirect', 'だった', 'кисл']
+
+  [Vector #3] Singular Value: 0.59
+    Read (+) : ['畫', 'onet', 'hecy', 'oner', 'charged', 'discharged', 'Called', 'bills', 'RF', 'trade']
+    Read (-) : ['entr', 'apan', 'tl', '�', '.dk', 'esch', '�', 'ous', 'ensl', 'Por']
+    Write (+): ['oundation', '/cc', 'หย', 'oq', '_ste', 'finder', '<S', 'fried', '(force', 'sk']
+
+  [Vector #4] Singular Value: 0.39
+    Read (+) : ['\\\\/', 'geological', '，他们', '\\\\\\', '[…]', 'verity', '$("<', '\\\\', 'mez', 'infertility']
+    Read (-) : ['imax', 'andle', 'ô', 'inn', 'ippo', 'onym', 'iqu', 'лоч', '凡', 'svob']
+    Write (+): ['Priv', 'edor', 'Priv', 'keyed', 'centres', 'failures', 'Centers', 'fix', 'Hij', 'tied']
+
+  [Vector #5] Singular Value: 0.32
+    Read (+) : ['edelta', 'isseur', 'avg', 'merc', 'fast', 'osaic', 'statement', 'chair', '님', 'Cha']
+    Read (-) : ['985', 'UZ', 'Stoke', 'ikon', 'uz', 'rys', 'Ukrain', 'Gry', 'ufe', '/topics']
+    Write (+): ['lač', 'ikler', '.Bundle', 'ृत', 'INED', 'onden', 'oloj', 'dde', 'ła', 'ije']
+
+=== LAYER 4 ===
+  [Vector #1] Singular Value: 0.71
+    Read (+) : ['ausp', 'をつ', 'зн', '작', 'signals', 'presup', '.ul', 'wig', 'heck', 'قن']
+    Read (-) : ['.Bundle', 'retain', 'gay', '团', 'bag', 'тра', 'ister', 'lara', 'etro', 'امی']
+    Write (+): ['яж', 'yna', 'ście', 'że', 'ľ', 'subclass', 'asto', 'pty', 'ź', 'orex']
+
+  [Vector #2] Singular Value: 0.68
+    Read (+) : ['elps', 'imei', 'acos', 'Pant', 'ціональ', 'رده', 'engel', 'getLocale', 'eng', 'protect']
+    Read (-) : ['imd', 'nex', 'Shelf', 'queryInterface', 'Sez', 'PTR', 'shelf', 'omers', 'العظ', 'ahy']
+    Write (+): ['_IMPLEMENT', 'igham', 'istics', 'exc', 'ricular', 'buf', 'ibern', 'complexity', '映', '.mousePosition']
+
+  [Vector #3] Singular Value: 0.43
+    Read (+) : ['ิญ', 'coni', 'ść', 'HOLDER', 'اعد', 'ials', 'usc', 'cellular', 'eczy', 'standing']
+    Read (-) : ['/feed', '/bus', 'โล', 'Kauf', '_sig', 'appings', 'apus', 'aal', '-fixed', 'Zuk']
+    Write (+): ['insensitive', 'ublish', 'exporting', 'answers', 'zoom', '-IS', 'dsa', 'matters', 'invoking', 'unte']
+
+  [Vector #4] Singular Value: 0.38
+    Read (+) : ['маг', 'nom', 'amour', '-normal', '.newLine', 'niejs', 'орот', 'vě', 'Spicer', 'atto']
+    Read (-) : ['swana', 'avers', 'lify', 'acquired', 'wound', 'statement', 'seq', 'styl', 'Saving', 'Ain']
+    Write (+): ['circum', 'prom', 'USB', 'dyn', 'summoned', 'Saving', 'Stuff', 'Hero', 'rumors', 'uem']
+
+  [Vector #5] Singular Value: 0.36
+    Read (+) : ['bach', 'ighbours', 'Err', '_EVAL', 'apan', 'iedo', 'ERR', 'Ras', 'Forward', 'convo']
+    Read (-) : ['urator', 'NCY', 'ragen', 'operation', 'elements', 'kennen', 'Matches', 'unge', 'fast', 'ũ']
+    Write (+): ['éné', '_animation', 'genders', 'itioner', 'sexes', 'cid', 'ghi', 'وى', 'age', '="#']
+
+=== LAYER 5 ===
+  [Vector #1] Singular Value: 7.93
+    Read (+) : ['mute', 'elps', '.Bundle', '\\Controllers', 'imei', 'YK', '.amazon', 'å', 'IELD', 'đặt']
+    Read (-) : ['ients', '.webkit', 'strap', 'osed', 'phin', '.NoArgsConstructor', 'ếu', '的情况', 'etyl', '.Windows']
+    Write (+): ['tall', 'Nam', 'cond', 'NaN', 'Radio', 'Shop', 'pane', 'miss', 'mes', '.chunk']
+
+  [Vector #2] Singular Value: 0.70
+    Read (+) : ['ISTER', 'FOOT', 'plevel', 'plate', 'ificio', 'LTD', 'Solution', 'UMMY', '.assertIn', 'ambassadors']
+    Read (-) : ['/extensions', 'Hers', 'ών', 'verk', '捕', 'spr', 'Camb', 'изб', '�', 'Plex']
+    Write (+): ['å', '▼', 'ar', '_ste', '\\Controllers', 'Jack', '(exports', 'mute', '(force', 'fried']
+
+  [Vector #3] Singular Value: 0.60
+    Read (+) : ['peri', '웃', 'yth', '(Print', 'roz', 'apor', 'elin', 'offence', 'QRST', 'amil']
+    Read (-) : ['aggio', 'exhibitions', 'gl', 'rypto', 'caff', 'iente', 'zend', '_Display', 'oleon', 'ゼ']
+    Write (+): ['rypto', 'exhibitions', 'aggio', 'gl', 'ゼ', 'iamo', 'ICAST', 'iest', 'IENT', 'ịch']
+
+  [Vector #4] Singular Value: 0.59
+    Read (+) : ['σπ', 'ardless', 'cray', 'gency', 'ubby', 'rossover', 'inish', 'naï', '.swing', 'Andrews']
+    Read (-) : ['elong', '移', 'localized', 'tong', 'Note', 'ém', 'fame', 'torn', 'machine', 'hung']
+    Write (+): ['移', 'ém', 'localized', 'elong', 'lash', 'fame', 'machine', 'rem', 'Malk', 'DLC']
+
+  [Vector #5] Singular Value: 0.51
+    Read (+) : ['ardy', 'itus', 'orm', 'Import', 'Ris', 'inherit', 'import', 'озд', 'ecs', '简']
+    Read (-) : ['ENTA', 'amongst', '%",', '...]', 'će', 'lobs', 'Among', 'acro', 'gor', 'among']
+    Write (+): ['芝', 'nar', 'regist', 'ラー', 'horizontal', 'môn', '으니', 'mini', 'IDGET', 'Spaces']
+
+=== LAYER 6 ===
+  [Vector #1] Singular Value: 0.74
+    Read (+) : ['.webkit', 'exual', 'link', 'ashes', 'faction', 'rog', '.telegram', 'gn', 'tud', 'lander']
+    Read (-) : ['/extensions', 'Thick', 'стит', 'sö', '.zoom', '乾', 'Unter', '<![', 'Wein', '�']
+    Write (+): ['(force', '\\Controllers', 'Rai', 'force', 'å', 'acos', 'đặt', 'utations', 'imei', '(exports']
+
+  [Vector #2] Singular Value: 0.57
+    Read (+) : ['dio', 'vey', '省', '_den', 'Fin', 'Cri', 'den', 'opard', 'bin', 'vice']
+    Read (-) : ['ъ', 'øy', 'št', 'øj', 'ąd', 'iß', 'ANCES', 'elijke', 'lew', 'Müller']
+    Write (+): ['diff', 'Wi', 'quotient', 'vog', 'McCorm', ':x', 'usb', 'Dal', 'adm', 'Addison']
+
+  [Vector #3] Singular Value: 0.44
+    Read (+) : ['Tenn', 'Killer', 'acci', 'greatness', 'annie', 'Pricing', 'Vance', 'umeric', 'uve', '.bind']
+    Read (-) : ['BUS', 'apes', 'jte', '+v', 'igos', 'verbess', 'jen', 'obus', 'lig', 'бо']
+    Write (+): ['hu', 'scop', 'isan', 'achine', 'ritch', 'Sound', '委员', 'BU', '_sound', 'obus']
+
+  [Vector #4] Singular Value: 0.44
+    Read (+) : ['jury', 'shalt', 'Coffee', 'uler', '.ly', 'Cast', 'ucu', 'Injury', '.dtd', 'у']
+    Read (-) : ['nex', 'infl', 'paralle', '-p', 'aning', 'ête', '-ing', 'anime', '-pres', '_INST']
+    Write (+): ['prostřed', 'interv', 'xico', 'posit', 'ifer', 'icus', 'ior', 'flag', '希', 'uv']
+
+  [Vector #5] Singular Value: 0.39
+    Read (+) : ['ğı', 'già', 'kem', 'Asked', 'umo', 'kami', 'Asked', 'invert', 'isl', '/extensions']
+    Read (-) : ['bricks', 'ainted', 'annihil', 'shattered', 'ikt', 'otec', 'emento', 'ANSI', 'oting', 'hans']
+    Write (+): ['UPC', 'capt', 'flakes', 'replen', 'oting', '退', 'ainted', 'bothers', 'hs', 'otec']
+
+=== LAYER 7 ===
+  [Vector #1] Singular Value: 0.78
+    Read (+) : ['achts', '射', 'aç', 'å', 'unstoppable', 'Falls', 'äche', 'UNKNOWN', '.Office', 'vůbec']
+    Read (-) : ['FTA', 'core', 'igital', 'vid', 'ale', 'Capitals', 'digital', 'omer', 'base', 'BASE']
+    Write (+): ['fulness', 'ект', '元', 'ream', 'phin', 'ose', '://%', 'Fen', 'Gn', '_IMPLEMENT']
+
+  [Vector #2] Singular Value: 0.63
+    Read (+) : ['chine', 'Sid', '-rights', '�', '-IS', 'Ка', 'elps', 'ièrement', 'toast', '("-']
+    Read (-) : ['otty', 'ork', 'ouri', 'Morav', 'ceph', 'asy', '/*!', 'oped', 'Compet', 'ivi']
+    Write (+): ['ście', 'ół', 'ěl', 'eled', 'że', 'ży', 'isko', 'ěž', 'niejs', 'ť']
+
+  [Vector #3] Singular Value: 0.45
+    Read (+) : ['Governance', 'čná', 'ingle', 'оль', 'Qualified', 'lied', 'тар', '感', 'ampp', 'acyj']
+    Read (-) : ['Shea', '="#', 'Tir', 'ebi', 'mou', 'Hubb', 'practicing', '"",', '贝', 'ей']
+    Write (+): ['usp', 'isce', 'Springer', 'chapter', 'ebi', 'Rev', 'fa', 'Hubb', 'base', 'mud']
+
+  [Vector #4] Singular Value: 0.43
+    Read (+) : ['جب', 'caution', 'Lights', 'lide', 'floors', 'sched', 'lots', 'Lights', 'bart', 'floor']
+    Read (-) : ['usta', '/english', 'ugas', '', 'ucz', 'ailable', 'multic', 'Mult', '.mult', 'ult']
+    Write (+): ['usta', 'uc', 'ailable', 'rita', 'ugas', 'ritz', 'aguay', 'ult', 'promin', '手']
+
+  [Vector #5] Singular Value: 0.42
+    Read (+) : ['isku', 'üle', 'Polic', '.Clear', '-clear', 'イト', 'ulp', 'earer', 'chair', 'Setter']
+    Read (-) : ['lew', 'Resident', 'bian', 'signed', '-signed', 'exe', 'scri', 'multim', 'wi', '敷']
+    Write (+): ['lew', 'spray', 'storms', 'ronym', 'Walter', 'scri', 'scrub', 'multin', 'capability', 'ognito']
+
+=== LAYER 8 ===
+  [Vector #1] Singular Value: 0.95
+    Read (+) : ['.Static', 'Mov', 'movement', '13', 'space', 'Movement', '2', ',', 'van', 'movements']
+    Read (-) : ['alike', 'respectively', 'śnie', 'ーン', 'ěž', 'agon', 'gether', 'assel', 'sek', '�']
+    Write (+): ['ąż', 'łu', 'zeń', 'ście', 'ąd', '\xadi', 'ľ', 'ół', 'śnie', 'ń']
+
+  [Vector #2] Singular Value: 0.69
+    Read (+) : ['orex', 'egl', 'uci', 'ilst', 'flake', 'isti', '-UA', 'yna', 'IGN', 'odes']
+    Read (-) : ['å', 'Rai', 'inging', 'kou', 'elps', '\\Controllers', 'mute', '(force', 'iske', 'usch']
+    Write (+): ['.Bundle', 'mute', 'elps', 'å', '\\Controllers', 'kou', '(force', 'getLocale', 'nye', 'anse']
+
+  [Vector #3] Singular Value: 0.48
+    Read (+) : ['Flint', 'discontin', 'Lee', 'Den', 'fan', 'Mis', 'Touches', 'Leh', 'flavour', 'clear']
+    Read (-) : ['orex', 'ANNEL', 'sam', 'ult', 'аче', 'hek', 'Ul', 'Ơ', 'ULT', 'ANG']
+    Write (+): ['checked', 'dum', 'asia', 'Las', 'ults', 'check', 'ulas', 'sac', 'unta', 'sou']
+
+  [Vector #4] Singular Value: 0.44
+    Read (+) : ['Programmer', 'ae', 'Goals', 'ilha', 'iane', 'oram', 'orz', 'iaz', 'aniu', '�']
+    Read (-) : ['ash', '!",', '리즈', 'shell', 'Ashe', ':!', 'Cross', '?",', 'moth', 'hindsight']
+    Write (+): ['ash', 'yst', 'در', 'Buildings', 'okes', '{},', 'SelectionMode', 'destroyer', '.cfg', '蒂']
+
+  [Vector #5] Singular Value: 0.43
+    Read (+) : ['велич', '份', 'fir', 'isecond', 'PWD', 'simp', 'ocene', 'IW', '칭', 'Forums']
+    Read (-) : ['oul', 'olt', 'orges', 'agg', '्रय', 'üstü', 'свер', '習', 'drop', '려']
+    Write (+): ['dims', 'olt', 'зь', '�', 'terra', 'dims', '려', 'pt', 'orges', 'igmat']
+
+=== LAYER 9 ===
+  [Vector #1] Singular Value: 1.11
+    Read (+) : ['.projects', 'airs', '.setter', 'adol', 'yb', 'Royals', '])[', 'GT', 'onymous', 'ariat']
+    Read (-) : ['uffles', 'inject', 'ива', 'เช', 'subjective', 'flies', 'ached', 'bracht', 'komen', 'ACHED']
+    Write (+): ['ży', 'ła', '\xadi', 'ije', 'če', '.Bundle', 'asto', 'ھ', 'ście', 'niejs']
+
+  [Vector #2] Singular Value: 0.51
+    Read (+) : ['लड', 'lak', 'fl', '花', 'pled', 'etype', 'znám', 'IDES', 'Sense', 'ESCO']
+    Read (-) : ['Les', '道', 'usc', 'awk', 'ivy', '道', 'inn', 'olon', 'Dependencies', 'Private']
+    Write (+): ['olon', '�', 'Wa', 'zew', '道', '.toolbox', 'Nab', 'relev', 'Prescott', 'Mission']
+
+  [Vector #3] Singular Value: 0.51
+    Read (+) : ['issions', 'ichten', 'ission', 'reur', '録', 'tings', '访', '�', '선', 'pline']
+    Read (-) : ['com', 'eyh', ',std', 'COM', 'ieme', 'Com', 'units', 'CAA', 'era', 'force']
+    Write (+): ['eh', 'anza', 'iez', 'rho', 'introduction', 'Sie', 'Collection', 'ieme', 'eu', 'eyh']
+
+  [Vector #4] Singular Value: 0.49
+    Read (+) : ['constitution', 'ANN', 'assic', 'هر', 'erior', 'Associations', 'Tips', '-responsive', 'PAT', 'SCR']
+    Read (-) : ['昌', 'Apr', 'apis', 'omens', 'odate', 'arel', 'лика', 'かい', '파', 'iza']
+    Write (+): ['soft', 'Black', 'black', 'Kraft', 'draft', 'de', 'поб', 'Earth', 'punct', 'runApp']
+
+  [Vector #5] Singular Value: 0.48
+    Read (+) : ['Overnight', 'overnight', 'Freund', 'zet', 'orgen', 'acos', 'Hal', 'Observ', 'Advertisement', 'Glow']
+    Read (-) : ['CONT', 'ably', '[|', 'CONT', 'elper', 'oday', 'carbon', 'plevel', 'inho', 'heck']
+    Write (+): ['χα', '续', 'insk', 'hoff', 'ins', 'elper', 'limiting', 'ackers', 'Second', 'χή']
+
+=== LAYER 10 ===
+  [Vector #1] Singular Value: 0.92
+    Read (+) : ['RAP', 'sen', 'asma', 'onte', '반', 'àn', '/bar', 'pursued', '急', 'ADV']
+    Read (-) : ['`[', 'acid', '.bits', 'RegularExpression', 'gesi', 'odi', 'ween', '"\',\'', 'gh', 'paso']
+    Write (+): ['delta', 'gl', 'innamon', '/etc', 'dw', 'estad', 'rumors', 'diff', 'gan', 'Beam']
+
+  [Vector #2] Singular Value: 0.59
+    Read (+) : ['express', 'ome', 'propri', 'alle', 'EXPRESS', 'Express', 'Cardinal', 'Trade', 'TOR', 'Appro']
+    Read (-) : ['oder', 'ichten', 'cha', 'Obs', 'elts', 'оду', 'loid', 'fades', 'zyst', 'orate']
+    Write (+): ['repr', 'elig', 'uest', 'agers', 'brook', 'orate', '情', 'order', 'otype', 'window']
+
+  [Vector #3] Singular Value: 0.58
+    Read (+) : ['COVID', 'Covid', 'Zoom', 'WL', 'holds', 'mn', 'ulos', 'bars', 'zoom', 'COVID']
+    Read (-) : ['ighton', 'ibel', 'ç', 'Centre', 'Shea', 'serial', 'programmes', 'visc', 'Programme', 'extensions']
+    Write (+): ['itra', 'ITA', 'ąd', 'çe', 'śmy', 'uell', 'rosis', '.program', 'ues', 'idas']
+
+  [Vector #4] Singular Value: 0.57
+    Read (+) : ['shooter', 'Carrier', 'Legend', 'Eugene', 'Shooter', 'Gam', 'lane', 'Hor', 'xx', '.contents']
+    Read (-) : ['utow', 'gebra', 'ipe', 'Ком', 'ignet', 'icode', 'inform', '�', 'DK', 'abol']
+    Write (+): ['/login', 'IfNeeded', '_windows', 'Juliet', 'cylinders', 'deser', 'urg', '_SELECTION', 'ataka', '.windows']
+
+  [Vector #5] Singular Value: 0.56
+    Read (+) : ['Signed', 'HS', '_IA', 'IPA', 'Signs', 'vido', 'LS', 'anos', 'Vue', 'Startup']
+    Read (-) : ['cre', 'wearer', 'بل', '(shape', '_prim', 'есп', 'kre', 'ucker', 'assen', 'erf']
+    Write (+): ['verz', '�', 'gest', 'исп', '�', 'ッチ', 'мот', 'Monterey', 'قر', '_filenames']
+
+=== LAYER 11 ===
+  [Vector #1] Singular Value: 1.08
+    Read (+) : ['Dumpster', 'anz', 'Prison', 'ика', 'польз', 'сіль', '655', 'Gest', "'aff", '/help']
+    Read (-) : ['aving', 'enas', '!!!!', 'ud', '\u200b', '=”', 'či', 'undi', '=="', 'amat']
+    Write (+): ['innamon', 'Shea', '�', '�', 'сю', '&utm', '翻', 'Huffman', '優', '修']
+
+  [Vector #2] Singular Value: 0.68
+    Read (+) : ['ubbles', 'ught', 'ughty', 'rought', 'пункт', '.inst', 'amarin', 'ejected', 'Thai', 'pa']
+    Read (-) : ['ensing', 'bre', 'ovsky', 'bj', 'iv', 'aji', 'ちゃん', '者', '/trans', 'ACA']
+    Write (+): ['indis', 'fled', '華', 'shrine', 'reass', 'Mango', '�', 'зя', 'tiv', 'lv']
+
+  [Vector #3] Singular Value: 0.66
+    Read (+) : ['elman', 'elled', 'endcode', 'refunded', 'mdl', 'DPS', 'rejoice', 'vej', 'entitled', 'ernals']
+    Read (-) : ['asper', 'же', 'ırı', 'يرة', 'ạt', 'ary', 'Norway', 'że', 'aday', 'resh']
+    Write (+): ['@(', '@(', 'mek', 'Fiesta', 'desta', 'cake', 'endimento', 'lige', 'soaking', "(\\'"]
+
+  [Vector #4] Singular Value: 0.64
+    Read (+) : ['ek', '-half', 'uch', 'ovan', 'ank', '盛', '-equ', 'ui', '-wh', 'unk']
+    Read (-) : ['arım', 'idente', 'icio', 'hibit', '.eth', 'waivers', 'latino', ')--', 'izers', 'varies']
+    Write (+): ['alion', 'azioni', '185', 'elijke', 'iane', 'ouble', 'inth', '431', 'ки', 'erah']
+
+  [Vector #5] Singular Value: 0.61
+    Read (+) : ['qua', 'án', 'itra', '=end', 'itness', 'orney', 'hlen', 'Nacht', 'vocals', 'ade']
+    Read (-) : ['Eu', 'Eu', 'Bear', 'verse', 'nem', 'óm', 'aly', 'Jug', 'omet', 'REAL']
+    Write (+): ['бин', 'ंदर', '’B', 'uD', 'posto', '.xhtml', 'ssql', 'Regs', '植物', '��']
+
+=== LAYER 12 ===
+  [Vector #1] Singular Value: 1.34
+    Read (+) : ['anz', 'вол', 'icker', 'лаз', 'ерж', 'слов', 'lear', 'Severity', 'Insensitive', '-router']
+    Read (-) : ['Pie', 'doubles', 'stand', 'tested', 'aceutical', 'rei', 'Ti', 'wild', 'horn', 'Authorized']
+    Write (+): ['innamon', '.arc', 'Aud', 'Shea', '.glide', '翻', '&utm', '�', '/etc', '�']
+
+  [Vector #2] Singular Value: 0.64
+    Read (+) : ['McMaster', '&q', 'ộc', 'dio', 'Mayo', 'sed', '.imgur', '.mit', 'appen', '.easy']
+    Read (-) : ['B', '-B', '-L', '-S', 'R', '-Ch', '-M', 'L', 'G', '間に']
+    Write (+): ['heartbeat', 'venge', 'unrecognized', 'xico', 'balk', 'Scotland', 'Visibility', 'causa', 'volution', 'UNKNOWN']
+
+  [Vector #3] Singular Value: 0.58
+    Read (+) : ['aled', 'eled', 'iel', 'Tak', 'Tes', 'nick', 'er', 'ayla', 'ellt', 'nick']
+    Read (-) : ['phalt', 'bian', 'оск', 'ogl', 'ché', 'Qui', 'phe', 'ох', 'образ', 'uple']
+    Write (+): ['Accessory', 'eer', 'hips', 'fixture', 'kits', 'sch', 'Bols', 'ein', 'ddit', 'ằm']
+
+  [Vector #4] Singular Value: 0.49
+    Read (+) : ['rica', 'nesia', 'Stateless', '/channel', 'rique', 'جان', 'Visibility', '조사', 'bies', 'cakes']
+    Read (-) : ['rown', 'industri', 'oment', 'a', 'ove', 'anager', 'ateg', 'immense', 'ọi', 'tremendous']
+    Write (+): ['اع', 'etti', 'ickers', 'urt', 'Elon', '?page', 'iques', '奪', 'Serena', 'rub']
+
+  [Vector #5] Singular Value: 0.48
+    Read (+) : ['en', 'PEND', 'elle', '-or', 'e', '-p', 'clo', 'ple', '-h', 'a']
+    Read (-) : ['gage', 'Popular', 'tents', 'Extension', 'overthrow', 'ateg', 'bots', 'Popular', 'bilt', 'zm']
+    Write (+): ['zburg', 'فصل', 'tls', 'icity', 'oine', 'urf', 'ussels', 'sburg', 'ein', 'POP']
+
+=== LAYER 13 ===
+  [Vector #1] Singular Value: 2.41
+    Read (+) : ['Bowie', 'D', 'été', 'ète', '棋', '_channel', 'použití', 'Js', '-channel', 'Mil']
+    Read (-) : ['ught', 'ab', 'rng', 'Nin', 'b', 'rape', 'admin', 'ram', 'ut', 'sim']
+    Write (+): ['łem', 'ält', 'zą', 'ła', 'ży', 'ły', 'zeń', 'adamente', 'ści', '\xadi']
+
+  [Vector #2] Singular Value: 0.94
+    Read (+) : ['Kraj', 'olit', 'Wayback', 'Nagar', 'Yad', 'alue', 'Tencent', 'ambil', 'vil', 'hexadecimal']
+    Read (-) : ['B', 'B', 'further', 'nearly', 'Glass', 'fully', '眼', 'fine', 'M', 'ah']
+    Write (+): [',', 'if', 'y', '', 'too', 'same', '.', '(', 'while', ':']
+
+  [Vector #3] Singular Value: 0.70
+    Read (+) : ['guest', 'pointer', 'Stateless', 'Cristiano', 'uzzi', 'Anadolu', 'spell', 'guest', 'Donne', 'McCabe']
+    Read (-) : ['kt', 'oj', 'rt', '/"', 'ikt', '245', '"),', 'ٹ', 'ijd', 'iked']
+    Write (+): ['Ack', 'Krist', 'thậm', 'ฆ', '臺', 'Florian', '출', '�', 'addle', 'etter']
+
+  [Vector #4] Singular Value: 0.60
+    Read (+) : ['olest', 'tsy', 'tok', 'Прод', 'Dost', 'lust', 'Reco', 'Vect', 'deaux', 'ostel']
+    Read (-) : ['C', '', 'M', 'of', 'with', 'L', '', 'A', 'and', ',']
+    Write (+): ['', '.', '.', '<|begin_of_text|>', '', '', ',', '…', 'that', 'for']
+
+  [Vector #5] Singular Value: 0.58
+    Read (+) : ['louder', 'emean', 'cstdlib', 'kidd', 'вал', 'vocational', 'unicip', 'sounding', 'lion', 'Vladim']
+    Read (-) : ['ro', 'rott', 'mal', 'avi', 'zel', 'ra', 'raz', 'dispos', 'transc', 'chez']
+    Write (+): ['', 'Andrew', 'John', '', '.', 'Hof', 'American', '.', ';', 'Jill']
+
+=== LAYER 14 ===
+  [Vector #1] Singular Value: 2.80
+    Read (+) : ['sns', 'characterized', '{\\"', 'र', 'ê', 'hä', 'unya', 'ML', 'ança', 'Ã']
+    Read (-) : ['inde', 'incur', 'ogle', 'Elev', 'Rodrig', 'darkest', 'Realt', 'hala', 'ieties', 'tek']
+    Write (+): ['łem', 'adamente', 'ält', 'ży', 'ści', 'ności', 'že', 'się', 'ši', 'šem']
+
+  [Vector #2] Singular Value: 1.56
+    Read (+) : ['ture', 'olit', 'halt', 'üzel', 'Sabha', 'lluminate', 'YRO', 'OMPI', 'orate', 'RITE']
+    Read (-) : ['', 'R', 'S', 'T', 'C', 'L', 'H', 'P', 'N', 'M']
+    Write (+): ['', 'in', 'a', '(', 'the', 'I', ',', 'A', 'N', 'and']
+
+  [Vector #3] Singular Value: 0.93
+    Read (+) : ['ful', 'tor', 'overs', 'ow', 'ах', 'ak', 'fully', 'utr', 'nes', '-s']
+    Read (-) : ['ILON', 'twilight', 'śmy', 'ior', 'Contrast', 'isations', 'ocha', 'imi', 'енти', 'IZE']
+    Write (+): ['lessness', 'pper', 'beck', 'pack', 'ago', 'illac', 'ค', 'ся', 'ful', 'AGO']
+
+  [Vector #4] Singular Value: 0.86
+    Read (+) : ['iked', 'verb', 'ū', 'loh', 'ig', 'emin', 'OLT', 'arn', '313', 'lok']
+    Read (-) : ['corner', 'behalf', 'forever', 'approx', 'courtesy', 'uplift', 'recovering', 'contrary', 'cash', 'healthy']
+    Write (+): ['comp', 'cryst', 'corner', 'successful', '답변', 'idores', 'snow', 'reasonable', 'preview', 'fraction']
+
+  [Vector #5] Singular Value: 0.77
+    Read (+) : ['Gallup', '胡', 'Philips', '254', 'uro', 'Jenkins', 'Rück', 'freely', '�', 'leaf']
+    Read (-) : ['oce', 'ière', ')!', 'nem', 'ALLY', 'zich', 'Controllers', '…', 'uais', 'ует']
+    Write (+): ['ilos', 'Minds', '応', 'cept', '命', 'Examiner', 'rama', 'Distrib', '界', 'کات']
+
+=== LAYER 15 ===
+  [Vector #1] Singular Value: 6.90
+    Read (+) : ['Annunci', 'juana', 'ribbon', 'pornos', 'prostitut', 'parator', 'PS', 'ubat', 'Čer', 'OMAP']
+    Read (-) : [',', 'the', 'and', 'of', 'a', 'for', 'to', 'in', '', '']
+    Write (+): ['<|begin_of_text|>', '', '＼', '､', '', '', 'شوند', '', '', '']
+
+  [Vector #2] Singular Value: 4.02
+    Read (+) : [',', 'in', 'the', 'a', 'and', '', 'of', '(', 'de', 'an']
+    Read (-) : ['initialise', 'желез', 'k�', 'mysl', 'aktivit', 'urdu', 'انر', '报道', '圍', 'KANJI']
+    Write (+): ['मस', 'الجز', '巡', '沈', 'النس', '漂', '博物', 'پژ', 'โรง', 'लड़क']
+
+  [Vector #3] Singular Value: 3.57
+    Read (+) : ['())', 'specs', 'StringValue', 'Radians', 'буд', 'imentary', 'mmo', 'imli', 'уй', 'ulares']
+    Read (-) : ['z', 'h', 'ir', 'ens', 'as', 'd', 'ul', 'av', 'ic', 'is']
+    Write (+): ['Se', 'El', 'Em', 'the', 'En', 'Ch', 'Tr', 'In', 'Har', 'Ad']
+
+  [Vector #4] Singular Value: 2.91
+    Read (+) : ['', '(', ',', '', '.', '/', '(', '[', ':', '-']
+    Read (-) : ['ob', ').</', 'z', 'tom', '.").', 'ro', '!".', ':".', '�s', '."</']
+    Write (+): ['?', ').</', ':<?', '`.`', ',{"', '?<', '*</', '"\';', "'||", '."</']
+
+  [Vector #5] Singular Value: 2.74
+    Read (+) : ['\u200b\u200b', '\u200c', '\ufeff', "\\'", '\u200b', "\\'", '&nbsp', 'WAN', 'Alv', '&apos']
+    Read (-) : ['eter', 'ży', '话', 'collision', 'iao', 'air', 'ien', 'Aff', 'ui', 'ienie']
+    Write (+): ['OUNDS', 'AGING', '经验', 'ন', 'Propagation', 'OUNTER', 'RING', 'USES', 'ималь', 'آنلاین']
+
